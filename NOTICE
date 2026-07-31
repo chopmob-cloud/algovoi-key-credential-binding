@@ -1,8 +1,8 @@
 algovoi-key-credential-binding
-Copyright 2026 Christopher Hopley / AlgoVoi (chopmob-cloud)
+Copyright 2026 AlgoVoi
 
 This product is part of the AlgoVoi agentic-payments substrate, authored by
-Christopher Hopley (AlgoVoi) and licensed under the Apache License, Version 2.0.
+AlgoVoi and licensed under the Apache License, Version 2.0.
 
 It specifies conformance vectors and a reference verifier for binding an
 RFC 9421 (HTTP Message Signatures) signature key to an issued agent credential,
