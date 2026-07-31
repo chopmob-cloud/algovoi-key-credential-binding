@@ -1,0 +1,38 @@
+{
+  "name": "@algovoi/key-credential-binding",
+  "version": "0.1.0",
+  "description": "Reference verifier and conformance vectors for binding an RFC 9421 signature key to an issued agent credential (key_anchored, scope_valid, credential_valid on top of raw signature verification)",
+  "keywords": [
+    "rfc9421",
+    "http-signatures",
+    "agent-credential",
+    "key-binding",
+    "conformance-vectors",
+    "ed25519"
+  ],
+  "license": "Apache-2.0",
+  "author": "AlgoVoi <chopmob@gmail.com>",
+  "type": "module",
+  "main": "./dist/src/binding-verifier.js",
+  "types": "./dist/src/binding-verifier.d.ts",
+  "files": [
+    "dist/src/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/test/",
+    "conformance": "tsc && node dist/run-conformance.js"
+  },
+  "dependencies": {
+    "@algovoi/rfc9421-verifier": "^0.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

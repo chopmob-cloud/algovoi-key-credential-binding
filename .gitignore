@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# TypeScript / Node
+typescript/node_modules/
+typescript/dist/
+typescript/package-lock.json
