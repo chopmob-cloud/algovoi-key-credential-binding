@@ -9,15 +9,13 @@ from __future__ import annotations
 
 import json
 import os
-import sys
 
 import pytest
 
-_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(_ROOT, "reference"))
-from binding_verifier import verify_bound_request  # noqa: E402
+_HERE = os.path.dirname(os.path.abspath(__file__))
+from algovoi_key_credential_binding.binding_verifier import verify_bound_request  # noqa: E402
 
-VECTOR_FILE = os.path.join(_ROOT, "vectors", "key-credential-binding-v1.json")
+VECTOR_FILE = os.path.join(_HERE, "..", "..", "vectors", "key-credential-binding-v1.json")
 DIMS = ("key_anchored", "signature_valid", "scope_valid", "credential_valid", "valid")
 
 

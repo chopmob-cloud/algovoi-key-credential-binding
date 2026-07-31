@@ -86,15 +86,15 @@ must never be used outside conformance testing.
 ## Layout
 
 ```
-reference/binding_verifier.py   Python reference key-to-credential binding verifier
-generate.py                     deterministic vector generator (self-verifying)
-run_conformance.py              Python GREEN/RED runner, exit 0 on all-pass
-tests/test_vectors.py           pytest: re-verify every vector + independence
-vectors/key-credential-binding-v1.json   the frozen vector set (language-neutral)
-typescript/src/binding-verifier.ts   TypeScript reference verifier (parity)
-typescript/test/vectors.test.ts       node:test over the same vectors
-typescript/run-conformance.ts         TypeScript GREEN/RED runner
-SPEC.md                         normative binding rules
+vectors/key-credential-binding-v1.json                    frozen vector set (language-neutral)
+python/algovoi_key_credential_binding/binding_verifier.py  Python reference verifier (pip package)
+python/generate.py                                        deterministic vector generator (self-verifying)
+python/run_conformance.py                                 Python GREEN/RED runner, exit 0 on all-pass
+python/tests/test_vectors.py                              pytest: re-verify every vector + independence
+typescript/src/binding-verifier.ts                        TypeScript reference verifier (npm package)
+typescript/test/vectors.test.ts                           node:test over the same vectors
+typescript/run-conformance.ts                             TypeScript GREEN/RED runner
+SPEC.md                                                   normative binding rules
 ```
 
 The vector file is the single source of truth; the Python and TypeScript
@@ -103,10 +103,11 @@ verifiers both consume it and produce identical results.
 ## Run
 
 ```
-pip install pynacl rfc8785 algovoi-rfc9421-signer algovoi-rfc9421-verifier
-python generate.py          # regenerate + self-verify the vectors
-python run_conformance.py   # GREEN/RED table, exit 0 iff all pass
-python -m pytest tests/ -q  # vector-driven tests
+cd python
+pip install -e .[dev]        # the package + generation/test dependencies
+python generate.py           # regenerate + self-verify the vectors
+python run_conformance.py     # GREEN/RED table, exit 0 iff all pass
+python -m pytest tests/ -q   # vector-driven tests
 ```
 
 The generator signs with the real `algovoi-rfc9421-signer` and verifies every

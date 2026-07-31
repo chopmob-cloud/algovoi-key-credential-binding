@@ -29,8 +29,7 @@ import rfc8785
 from nacl.signing import SigningKey
 from algovoi_rfc9421_signer import sign_request
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "reference"))
-from binding_verifier import verify_bound_request  # noqa: E402
+from algovoi_key_credential_binding.binding_verifier import verify_bound_request  # noqa: E402
 
 # --- fixed test keypairs -------------------------------------------------------
 # Deterministic Ed25519 seeds. Public keys are derived below, never hardcoded.
@@ -322,7 +321,7 @@ def main() -> None:
     }
 
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                        "vectors", "key-credential-binding-v1.json")
+                        "..", "vectors", "key-credential-binding-v1.json")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(out, f, indent=2)

@@ -12,6 +12,15 @@
   ],
   "license": "Apache-2.0",
   "author": "AlgoVoi <chopmob@gmail.com>",
+  "homepage": "https://github.com/chopmob-cloud/algovoi-key-credential-binding#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chopmob-cloud/algovoi-key-credential-binding.git",
+    "directory": "typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/chopmob-cloud/algovoi-key-credential-binding/issues"
+  },
   "type": "module",
   "main": "./dist/src/binding-verifier.js",
   "types": "./dist/src/binding-verifier.d.ts",

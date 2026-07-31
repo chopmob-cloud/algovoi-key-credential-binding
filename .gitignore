@@ -2,6 +2,10 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+python/build/
+python/dist/
+python/*.egg-info/
+*.egg-info/
 
 # TypeScript / Node
 typescript/node_modules/

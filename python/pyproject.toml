@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "algovoi-key-credential-binding"
+version = "0.1.0"
+description = "Bind an RFC 9421 HTTP Message Signature key to an issued agent credential: reference verifier for key_anchored, scope_valid, and credential_valid on top of raw signature verification"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "AlgoVoi", email = "chopmob@gmail.com" },
+]
+keywords = [
+  "rfc9421",
+  "http-signatures",
+  "agent-credential",
+  "key-binding",
+  "conformance-vectors",
+  "ed25519",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Security :: Cryptography",
+  "Typing :: Typed",
+]
+dependencies = [
+  "algovoi-rfc9421-verifier>=0.3.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "algovoi-rfc9421-signer>=0.1.0",
+  "rfc8785>=0.1.4",
+  "pynacl>=1.5.0",
+  "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/chopmob-cloud/algovoi-key-credential-binding"
+Documentation = "https://github.com/chopmob-cloud/algovoi-key-credential-binding#readme"
+Repository = "https://github.com/chopmob-cloud/algovoi-key-credential-binding"
+Issues = "https://github.com/chopmob-cloud/algovoi-key-credential-binding/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["algovoi_key_credential_binding*"]
