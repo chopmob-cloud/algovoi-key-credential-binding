@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "algovoi-key-credential-binding"
-version = "0.1.0"
+version = "0.1.2"
 description = "Bind an RFC 9421 HTTP Message Signature key to an issued agent credential: reference verifier for key_anchored, scope_valid, and credential_valid on top of raw signature verification"
 readme = "README.md"
 requires-python = ">=3.10"
