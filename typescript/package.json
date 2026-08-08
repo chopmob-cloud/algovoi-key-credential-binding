@@ -1,6 +1,6 @@
 {
   "name": "@algovoi/key-credential-binding",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Reference verifier and conformance vectors for binding an RFC 9421 signature key to an issued agent credential (key_anchored, scope_valid, credential_valid on top of raw signature verification)",
   "keywords": [
     "rfc9421",

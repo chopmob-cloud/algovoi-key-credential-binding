@@ -15,7 +15,9 @@ credential (keyed by `keyid`), never from the request artifact.
 
 See the
 [repository](https://github.com/chopmob-cloud/algovoi-key-credential-binding)
-for `SPEC.md` and the language-neutral vector set.
+for `SPEC.md` and the language-neutral vector set, and
+[algovoi.co.uk](https://algovoi.co.uk) / [docs.algovoi.co.uk](https://docs.algovoi.co.uk)
+for the wider agent-payments and verifiable-compliance estate this is part of.
 
 ## Install
 
