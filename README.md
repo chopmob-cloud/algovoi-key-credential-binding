@@ -1,6 +1,5 @@
 # algovoi-key-credential-binding
 
-
 [![PyPI](https://img.shields.io/pypi/v/algovoi-key-credential-binding)](https://pypi.org/project/algovoi-key-credential-binding/) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 [![npm](https://img.shields.io/npm/v/@algovoi/key-credential-binding)](https://www.npmjs.com/package/@algovoi/key-credential-binding)
 
